@@ -1,0 +1,38 @@
+coluna,unidade,arquivo,descricao
+timestamp,Timestamp,base_aprendizagem_estufa_hibrida; episodios_teste_controle,Instante da observação com passo de 10 minutos.
+dia_cultivo,Inteiro,base_aprendizagem_estufa_hibrida,"Dia do cultivo, de 1 a 120."
+passo_no_dia,Inteiro,base_aprendizagem_estufa_hibrida,"Índice do passo dentro do dia, de 0 a 143."
+hora_decimal,h,base_aprendizagem_estufa_hibrida,Hora do dia em formato decimal.
+fase_cultivo,Categoria,base_aprendizagem_estufa_hibrida; episodios_teste_controle; metadados_episodios_teste,"germinacao, vegetativo ou floracao."
+temperatura_externa_c,°C,base_aprendizagem_estufa_hibrida; episodios_teste_controle,Temperatura externa do ambiente.
+umidade_externa_pct,%,base_aprendizagem_estufa_hibrida; episodios_teste_controle,Umidade relativa externa.
+radiacao_solar_w_m2,W/m²,base_aprendizagem_estufa_hibrida; episodios_teste_controle,Radiação solar incidente.
+velocidade_vento_m_s,m/s,base_aprendizagem_estufa_hibrida; episodios_teste_controle,Velocidade do vento.
+temperatura_referencia_c,°C,base_aprendizagem_estufa_hibrida; episodios_teste_controle,Setpoint de temperatura no instante t.
+umidade_referencia_pct,%,base_aprendizagem_estufa_hibrida; episodios_teste_controle,Setpoint de umidade no instante t.
+temperatura_interna_c,°C,base_aprendizagem_estufa_hibrida,Temperatura interna no instante t.
+umidade_interna_pct,%,base_aprendizagem_estufa_hibrida,Umidade interna no instante t.
+erro_temperatura_c,°C,base_aprendizagem_estufa_hibrida,Setpoint de temperatura menos temperatura interna.
+erro_umidade_pct,p.p.,base_aprendizagem_estufa_hibrida,Setpoint de umidade menos umidade interna.
+aquecedor_pct,%,base_aprendizagem_estufa_hibrida,Abertura relativa do aquecedor gerada pelo controlador especialista.
+ventilacao_pct,%,base_aprendizagem_estufa_hibrida,Abertura relativa da ventilação.
+nebulizacao_pct,%,base_aprendizagem_estufa_hibrida,Abertura relativa da nebulização.
+sombreamento_pct,%,base_aprendizagem_estufa_hibrida,Abertura relativa do sombreamento.
+consumo_energia_relativo,adim.,base_aprendizagem_estufa_hibrida,Indicador relativo de energia do passo.
+consumo_agua_relativo,adim.,base_aprendizagem_estufa_hibrida,Indicador relativo de água do passo.
+temperatura_interna_t1_c,°C,base_aprendizagem_estufa_hibrida,Temperatura interna no próximo passo.
+umidade_interna_t1_pct,%,base_aprendizagem_estufa_hibrida,Umidade interna no próximo passo.
+indice_estresse_t1,adim.,base_aprendizagem_estufa_hibrida,Índice sintético de estresse térmico-higrométrico no próximo passo.
+particao_sugerida,Categoria,base_aprendizagem_estufa_hibrida,"treino, validacao ou teste."
+delta_temperatura_c,°C,base_aprendizagem_estufa_hibrida,Variação da temperatura entre t e t+1.
+delta_umidade_pct,p.p.,base_aprendizagem_estufa_hibrida,Variação da umidade entre t e t+1.
+episodio_id,Inteiro,episodios_teste_controle; metadados_episodios_teste,Identificador do episódio de teste (1 a 20).
+passo_episodio,Inteiro,episodios_teste_controle,"Índice do passo dentro do episódio, de 0 a 143."
+temperatura_inicial_episodio_c,°C,episodios_teste_controle,Temperatura interna na condição inicial do episódio.
+umidade_inicial_episodio_pct,%,episodios_teste_controle,Umidade interna na condição inicial do episódio.
+dia_cultivo_origem,Inteiro,metadados_episodios_teste,Dia do cultivo da base principal de onde o episódio foi extraído.
+instante_inicial,Timestamp,metadados_episodios_teste,Timestamp de início do episódio de teste.
+instante_final,Timestamp,metadados_episodios_teste,Timestamp de encerramento do episódio de teste.
+temperatura_inicial_c,°C,metadados_episodios_teste,Temperatura interna no início do episódio (equivalente a temperatura_inicial_episodio_c).
+umidade_inicial_pct,%,metadados_episodios_teste,Umidade interna no início do episódio (equivalente a umidade_inicial_episodio_pct).
+passos,Inteiro,metadados_episodios_teste,"Número total de passos do episódio (sempre 144, correspondendo a um dia completo)."
