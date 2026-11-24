@@ -2,6 +2,7 @@
 
 import numpy as np
 import pandas as pd
+from skfuzzy import trimf
 
 
 ATUADORES = ['aquecedor', 'ventilacao', 'nebulizacao', 'sombreamento']
@@ -11,13 +12,7 @@ DELTA_T, DELTA_H = 1.0, 5.0
 
 def pertinencia_triangular(x, a, b, c):
     """Triângulo com ombros permitidos quando a=b ou b=c."""
-    if a == b == c:
-        return float(x == a)
-    if a == b:
-        return float(np.clip((c - x) / (c - b), 0, 1))
-    if b == c:
-        return float(np.clip((x - a) / (b - a), 0, 1))
-    return float(np.clip(min((x - a) / (b - a), (c - x) / (c - b)), 0, 1))
+    return float(trimf(np.asarray([x]), np.asarray([a, b, c]))[0])
 
 
 class ControladorFuzzy:
